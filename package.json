@@ -1,0 +1,19 @@
+{
+  "name": "airway",
+  "private": true,
+  "author": {
+    "name": "Ruy Monteiro",
+    "email": "ruystfrancis@gmail.com"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "lerna": "lerna"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
