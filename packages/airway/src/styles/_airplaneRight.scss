@@ -1,0 +1,34 @@
+.airplaneRight {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: flyRight;
+  -webkit-animation-duration: 10s;
+
+  animation: ease-in-out infinite;
+  animation-name: flyRight;
+  animation-duration: 10s;
+}
+
+.airplaneRight svg {
+  fill: var(--airplane-right-fill-color);
+  transform: rotate(180deg);
+}
+
+.airplaneRight .airplaneLine {
+  background: linear-gradient(
+    270deg,
+    var(--airplane-right-fill-color) 0%,
+    rgba(163, 57, 227, 0) 100%
+  );
+  opacity: 0.5;
+
+  margin-right: -15px;
+}
+
+.airplane svg {
+  margin-left: -20px;
+}

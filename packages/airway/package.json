@@ -1,0 +1,29 @@
+{
+  "name": "airway",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "ruymon <ruystfrancis@gmail.com>",
+  "homepage": "https://github.com/ruymon/airway#readme",
+  "license": "ISC",
+  "main": "dist/airway.js",
+  "types": "dist/airway.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruymon/airway.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build:styles": "sass ./src/styles/styles.scss ./dist/styles/styles.min.css --style compressed --no-source-map",
+    "build:scripts": "tsc",
+    "build": "yarn build:styles && yarn build:scripts"
+  },
+  "bugs": {
+    "url": "https://github.com/ruymon/airway/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}

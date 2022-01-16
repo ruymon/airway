@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+
+  <link rel="stylesheet" href="../../packages/airway/dist/styles/styles.min.css">
+
+  <!-- This a example css. The ideal solution is to put this in a separate css file -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* You can costumize your container color in the config object or here. */
+    #airwayContainer {
+      background: url(./airwayGrid.svg) repeat;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="airwayContainer"></div>
+
+  <script type="module">
+    import { Airway } from '../../packages/airway/dist/airway.js';
+
+    const myAirway = new Airway("#airwayContainer", {
+      height: 200,
+      colorFromLeft: "#a339e3",
+      colorFromRight: "#2ec662",
+    });
+
+    myAirway.executeAirplanes();
+  </script>
+
+</html>

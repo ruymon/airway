@@ -1,0 +1,35 @@
+@keyframes flyRight {
+  0% {
+    left: calc(0px - ((100vw / 4) + 30px));
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes flyRight {
+  0% {
+    left: calc(0px - ((100vw / 4) + 30px));
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes flyLeft {
+  0% {
+    right: calc(0px - ((100vw / 4) + 30px));
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes flyLeft {
+  0% {
+    right: calc(0px - ((100vw / 4) + 30px));
+  }
+  100% {
+    right: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.airplaneLeft {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  right: 0;
+
+  transform: rotate(180deg);
+
+  -webkit-animation: ease-in-out infinite;
+  -webkit-animation-name: flyLeft;
+  -webkit-animation-duration: 13s;
+
+  animation: ease-in-out infinite;
+  animation-name: flyLeft;
+  animation-duration: 13s;
+}
+
+.airplaneLeft svg {
+  fill: var(--airplane-left-fill-color);
+  transform: rotate(180deg);
+}
+
+.airplaneLeft .airplaneLine {
+  background: linear-gradient(
+    270deg,
+    var(--airplane-left-fill-color) 0%,
+    rgba(163, 57, 227, 0) 100%
+  );
+  opacity: 0.5;
+
+  margin-right: -15px;
+}
