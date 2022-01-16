@@ -14,7 +14,7 @@
   "scripts": {
     "lerna": "lerna",
     "build": "lerna run build",
-    "realease": "changeset publish"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.19.0",
