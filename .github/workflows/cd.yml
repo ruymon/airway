@@ -1,0 +1,45 @@
+name: CD
+on:
+  release:
+    types: [created]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
+      
+      - name: Generate build
+        run: npm run build
+      
+      - name: Publish lib to NPM
+        run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  # build-docs:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repo
+  #       uses: actions/checkout@v2
+
+  #     - name: Install dependencies
+  #       run: npm install
+
+  #     - name: Generate docs
+  #       run: npm run gen-docs
+
+  #     - name: Deploy 🚀
+  #       uses: JamesIves/github-pages-deploy-action@4.1.6
+  #       with:
+  #         branch: gh-pages
+  #         folder: docs
