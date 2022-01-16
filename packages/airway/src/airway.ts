@@ -1,9 +1,9 @@
-interface LogArgumentsType {
+type LogArgumentsType = {
   msg: string;
   type?: "error" | "warn" | "info" | "debug" | "log";
 }
 
-interface AirwayConfig {
+type AirwayConfig = {
   height?: number | string;
   backgroundColor?: string;
   resizable?: boolean;
@@ -23,9 +23,9 @@ const defaultConfig: AirwayConfig = {
   log: false,
 };
 
-function getRandomSeconds(min: number, max: number): number {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+function getRandomSeconds(value_min: number, value_max: number): number {
+  const min = Math.ceil(value_min);
+  const max = Math.floor(value_max);
   return Math.floor(Math.random() * (max - min) + min) * 1000;
 }
 
