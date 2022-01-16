@@ -32,7 +32,7 @@ function getRandomSeconds(min: number, max: number): number {
 export class Airway {
   container!: HTMLElement;
   config;
-  interval = 0;
+  interval: any = 0;
 
   constructor(container: HTMLElement | string, config: AirwayConfig = {}) {
     this.setContainer(container);
